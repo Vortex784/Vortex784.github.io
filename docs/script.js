@@ -177,13 +177,13 @@ function updateGameArea() {
       target.update();
       rocket.update();
       checkRocket();
-      if (target.destroyed && target.frame < explosionFrames.length ) {
+      if (target.destroyed && target.frame < explosionFrames.length - 1 ) {
         target.y += 1;
         target.frame += 1;
-        var tempFrame = explosionFrames[target.frame]; 
+        var tempFrame = explosionFrames[target.frame];
         target.image.src = tempFrame;
       }
-      if (target.frame == 2) {
+      if (target.frame == explosionFrames.length - 1) {
         target.x = -100;
         target.y = -100;
         targets.pop;
