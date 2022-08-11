@@ -32,18 +32,18 @@ const tankDestroyedImageUrl = "res/Tank_Destroyed.png";
 const targetImageUrl = "res/Target.png";
 const rocketImageUrl = "res/Rocket.png";
 
-const frame0 = "res/frame0";
-const frame1 = "res/frame1";
-const frame2 = "res/frame2";
-const frame3 = "res/frame3";
-const frame4 = "res/frame4";
-const frame5 = "res/frame5";
-const frame6 = "res/frame6";
-const frame7 = "res/frame7";
-const frame8 = "res/frame8";
-const frame9 = "res/frame9";
-const frame10 = "res/frame10";
-const frame11 = "res/frame11";
+const frame0 = "res/frame0.png";
+const frame1 = "res/frame1.png";
+const frame2 = "res/frame2.png";
+const frame3 = "res/frame3.png";
+const frame4 = "res/frame4.png";
+const frame5 = "res/frame5.png";
+const frame6 = "res/frame6.png";
+const frame7 = "res/frame7.png";
+const frame8 = "res/frame8.png";
+const frame9 = "res/frame9.png";
+const frame10 = "res/frame10.png";
+const frame11 = "res/frame11.png";
 
 var gameArea = {
   start: function () {
