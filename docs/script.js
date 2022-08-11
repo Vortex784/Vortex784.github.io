@@ -26,7 +26,7 @@ var explosionFrames = [];
 var isGameOver = false;
 var isLineCrossed = false;
 
-const droneImageUrl = "res/Drone.png";
+const droneImageUrl = "res/frame1.png";
 const tankImageUrl = "res/Tank.png";
 const tankDestroyedImageUrl = "res/Tank_Destroyed.png";
 const targetImageUrl = "res/Target.png";
