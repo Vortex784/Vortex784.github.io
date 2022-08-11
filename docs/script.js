@@ -180,14 +180,15 @@ function updateGameArea() {
       if (target.destroyed && target.frame < explosionFrames.length - 1 ) {
         target.y += 1;
         target.frame += 1;
-        var tempFrame = explosionFrames[target.frame];
-        target.image.src = tempFrame;
+        target.image.src = frame4;
       }
       if (target.frame == explosionFrames.length - 1) {
         target.x = -100;
         target.y = -100;
+        target.frame = 0;
         targets.pop;
         rockets.pop;
+        //alert("pop");
       }
     }
   }
@@ -281,7 +282,7 @@ function checkRocket() {
     rocket.x = -100;
     rocket.y = -100;
 
-    target.image.src = frame0;
+    target.image.src = frame1;
     target.destroyed = true;
 
   }
