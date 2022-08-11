@@ -32,6 +32,19 @@ const tankDestroyedImageUrl = "res/Tank_Destroyed.png";
 const targetImageUrl = "res/Target.png";
 const rocketImageUrl = "res/Rocket.png";
 
+const frame0 = "res/frame0";
+const frame1 = "res/frame1";
+const frame2 = "res/frame2";
+const frame3 = "res/frame3";
+const frame4 = "res/frame4";
+const frame5 = "res/frame5";
+const frame6 = "res/frame6";
+const frame7 = "res/frame7";
+const frame8 = "res/frame8";
+const frame9 = "res/frame9";
+const frame10 = "res/frame10";
+const frame11 = "res/frame11";
+
 var gameArea = {
   start: function () {
     var cv = document.getElementById('cv');
@@ -99,18 +112,18 @@ function initLevel() {
 
   offset = (window.innerWidth - cv.width) / 2;
 
-  explosionFrames.push("res/frame0.png");
-  explosionFrames.push("res/frame1.png");
-  explosionFrames.push("res/frame2.png");
-  explosionFrames.push("res/frame3.png");
-  explosionFrames.push("res/frame4.png");
-  explosionFrames.push("res/frame5.png");
-  explosionFrames.push("res/frame6.png");
-  explosionFrames.push("res/frame7.png");
-  explosionFrames.push("res/frame8.png");
-  explosionFrames.push("res/frame9.png");
-  explosionFrames.push("res/frame10.png");
-  explosionFrames.push("res/frame11.png");
+  // explosionFrames.push("res/frame0.png");
+  // explosionFrames.push("res/frame1.png");
+  // explosionFrames.push("res/frame2.png");
+  // explosionFrames.push("res/frame3.png");
+  // explosionFrames.push("res/frame4.png");
+  // explosionFrames.push("res/frame5.png");
+  // explosionFrames.push("res/frame6.png");
+  // explosionFrames.push("res/frame7.png");
+  // explosionFrames.push("res/frame8.png");
+  // explosionFrames.push("res/frame9.png");
+  // explosionFrames.push("res/frame10.png");
+  // explosionFrames.push("res/frame11.png");
 
   // let fuel = document.getElementById("fuel");
   // fuel.style.visibility = "visible";
@@ -164,12 +177,12 @@ function updateGameArea() {
       target.update();
       rocket.update();
       checkRocket();
-      if (target.destroyed && target.frame < explosionFrames.length - 1) {
+      if (target.destroyed ) {
         target.y += 1;
         target.frame += 1;
-        target.image.src = explosionFrames[target.frame];
+        target.image.src = frame1;
       }
-      if (target.frame == explosionFrames.length - 1) {
+      if (target.frame == 2) {
         target.x = -100;
         target.y = -100;
         targets.pop;
@@ -267,7 +280,7 @@ function checkRocket() {
     rocket.x = -100;
     rocket.y = -100;
 
-    target.image.src = explosionFrames[target.frame];
+    target.image.src = frame0;
     target.destroyed = true;
 
   }
