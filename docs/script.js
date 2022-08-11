@@ -99,18 +99,18 @@ function initLevel() {
 
   offset = (window.innerWidth - cv.width) / 2;
 
-  explosionFrames.push("res/frame0.gif");
-  explosionFrames.push("res/frame1.gif");
-  explosionFrames.push("res/frame2.gif");
-  explosionFrames.push("res/frame3.gif");
-  explosionFrames.push("res/frame4.gif");
-  explosionFrames.push("res/frame5.gif");
-  explosionFrames.push("res/frame6.gif");
-  explosionFrames.push("res/frame7.gif");
-  explosionFrames.push("res/frame8.gif");
-  explosionFrames.push("res/frame9.gif");
-  explosionFrames.push("res/frame10.gif");
-  explosionFrames.push("res/frame11.gif");
+  explosionFrames.push("res/frame0.png");
+  explosionFrames.push("res/frame1.png");
+  explosionFrames.push("res/frame2.png");
+  explosionFrames.push("res/frame3.png");
+  explosionFrames.push("res/frame4.png");
+  explosionFrames.push("res/frame5.png");
+  explosionFrames.push("res/frame6.png");
+  explosionFrames.push("res/frame7.png");
+  explosionFrames.push("res/frame8.png");
+  explosionFrames.push("res/frame9.png");
+  explosionFrames.push("res/frame10.png");
+  explosionFrames.push("res/frame11.png");
 
   // let fuel = document.getElementById("fuel");
   // fuel.style.visibility = "visible";
