@@ -30,6 +30,7 @@ const tankImageUrl = "res/Tank.png";
 const tankDestroyedImageUrl = "res/Tank_Destroyed.png";
 const targetImageUrl = "res/Target.png";
 const rocketImageUrl = "res/Rocket.png";
+const backgroundImageUrl = "res/Background.png";
 
 const frame0 = "res/frame0.png";
 const frame1 = "res/frame1.png";
@@ -113,22 +114,6 @@ function initLevel() {
 
   offset = (window.innerWidth - cv.width) / 2;
 
-  //  explosionFrames.push("res/frame0.png");
-  //  explosionFrames.push("res/frame1.png");
-  //  explosionFrames.push("res/frame2.png");
-  //  explosionFrames.push("res/frame3.png");
-  //  explosionFrames.push("res/frame4.png");
-  //  explosionFrames.push("res/frame5.png");
-  //  explosionFrames.push("res/frame6.png");
-  //  explosionFrames.push("res/frame7.png");
-  //  explosionFrames.push("res/frame8.png");
-  //  explosionFrames.push("res/frame9.png");
-  //  explosionFrames.push("res/frame10.png");
-  //  explosionFrames.push("res/frame11.png");
-
-  // let fuel = document.getElementById("fuel");
-  // fuel.style.visibility = "visible";
-  // fuel.style.right = barOffsetRight;
   fuel = cv.width - 10;
   maxFuel = cv.width - 10;
 
@@ -150,11 +135,24 @@ function initLevel() {
   }
 
   drone = new component(200, 200, droneImageUrl, cv.width / 2, cv.height / 1.2, "drone");
+  background = new component (cv.width, cv.height, backgroundImageUrl, cv.width/2, cv.height/2, "background");
+  background2 = new component (cv.width, cv.height, backgroundImageUrl, cv.width/2, -cv.height/2, "background");
+  background.speedY = 1;
+  background2.speedY = 1;
 }
 
 // Update game tick
 function updateGameArea() {
   gameArea.clear();
+  if(background.y >= cv.height*1.5) {
+    background.y = cv.height/2;
+    background2.y = -cv.height/2;
+  }
+  background.update();
+  background.newPos();
+  background2.update();
+  background2.newPos();
+  
   updateTimer();
   updateFuel();
 
@@ -189,7 +187,6 @@ function updateGameArea() {
         target.frame = 0;
         targets.pop;
         rockets.pop;
-        //alert("pop");
       }
     }
   }
